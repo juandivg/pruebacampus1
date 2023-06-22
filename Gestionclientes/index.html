@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <header class="flex justify-evenly w-full py-[2%] text-white bg-blue-500">
+        <p class="flex w-full justify-center items-center text-[30px]">
+            Lavadero Car Wash
+        </p>
+        <div class="w-[20%] h-[10%]">
+            <img src="/imagenes/logocarwash.jpg" alt="logo">
+        </div>
+        <ul class="flex w-full justify-center items-center flex-row justify-evenly">
+           <a href="/Gestionservicios/index.html"> <li>Gestion de servicios</li></a>
+            <li>Compra del servicio</li>
+            <li>CLientes fieles</li>
+        </ul>
+
+    </header>
+<div class="flex flex-col justify-center items-center">
+            <div>
+                <h1 class="text-[30px] py-[10px] font-bold">Registro de clientes</h1>
+            </div>
+                <form onsubmit="enviar(event)" class="flex flex-col">
+                    <div class="flex w-full py-[20px] justify-between">
+                        <div>
+                            <p>Numero de identificacion</p>
+                            <input class="h-[40px] border border-blue-500
+                             rounded-md mr-[20px]" name="id" type="text">
+                        </div>
+                        <div>
+                            <p>Nombres</p>
+                        <input class="h-[40px] border border-blue-500
+                         rounded-md" name="name" type="text">
+                        </div>
+                        <div>
+                            <p>Apellidos</p>
+                            <input class="h-[40px]  border border-blue-500
+                             rounded-md" name="lastname" type="text">
+                        </div>
+                    </div>
+                
+                    <div class="flex w-full justify-evenly">
+
+                        <div>
+                            <p>Placa auto</p>
+                            <input class="h-[40px] border border-blue-500
+                             rounded-md mr-[20px]" name="placa" type="text">
+                        </div>
+                        <div>
+                            <p>Tipo</p>
+                            <input class="h-[40px] border border-blue-500
+                             rounded-md" name="type" type="text">
+                        </div>
+                    </div>
+                    <div class="flex w-full justify-evenly">
+
+                        <div>
+                            <p>Correo electronico</p>
+                            <input class="h-[40px] border border-blue-500
+                             rounded-md mr-[20px]" name="email" type="text">
+                        </div>
+                        <div>
+                            <p>Telefono</p>
+                            <input class="h-[40px] border border-blue-500
+                             rounded-md" name="number" type="text">
+                        </div>
+                    </div>
+                <div class=" m-auto py-[20px]">
+                    <button class="border text-white border-blue-500
+                         rounded-xl bg-blue-600 p-[5px] px-8" type="submit">Enviar</button>
+                </div>
+            </form>
+            <div class="flex w-full flex-col justify-center items-center">
+                <div class="flex flex-col pr-[10px]">
+                    <p class="text-center">Buscar por nombre</p>
+                    <input onkeyup="buscar(event)" id="inpu1" class="border border-black rounded-xl" name="nombre1" type="text">
+                </div>
+                <div class="flex flex-col pr-[10px]">
+                    <p class="text-center">Buscar por apellido</p>
+                    <input onkeyup="buscar(event)" id="inpu2" class="border border-black rounded-xl" name="nombre2" type="text">
+                </div>
+                <div class="flex flex-col pr-[10px]">
+                    <p class="text-center">Buscar por ID</p>
+                    <input onkeyup="buscar(event)" id="inpu3" class="border border-black rounded-xl" name="nombre3" type="text">
+                </div>
+            
+                
+                    <table>
+                            <thead>
+                                <tr class="bg-gray-100">
+                                
+                                    
+                                    <th>
+                                        <div class="flex px-8 justify-center items-center">
+                                            <p>Numero de identificacion</p>
+                                        </div>
+                        
+                                    </th>
+            
+                                
+                            
+                            
+                              
+                                <th>
+                                    <div class="flex px-8 justify-center items-center">
+                                        <p>Nombres</p>
+                                    </div>
+            
+                                </th>
+            
+                                
+                            
+                            
+                                
+                                    <th>
+                                        <div class="flex px-8 justify-center items-center">
+                                            <p>Apellidos</p>
+                                        </div>
+                                    </th>
+                                    
+            
+                                
+                            
+                            
+                                
+                                    <th>
+                                        <div class="flex px-8 justify-center items-center">
+                                            <p>Placa auto</p>
+                                        </div>
+                                    </th>
+            
+                                
+                            
+                                <th>
+                                    <div class="flex px-8 justify-center items-center">
+                                        <p>Tipo</p>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="flex px-8 justify-center items-center">
+                                        <p>Correo</p>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="flex px-8 justify-center items-center">
+                                        <p>Telefono</p>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="flex px-8 justify-center items-center">
+                                        <p>ELiminar</p>
+                                    </div>
+                                </th>
+                            
+                        </tr>
+                            </thead>
+                            <tbody id="cont">
+            
+                            </tbody>
+            
+                    </table>
+                
+            </div>
+                
+
+    </div>
+
+
+      
+</body>
+<script src="./main.js"></script>
+</html>
